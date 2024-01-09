@@ -1,15 +1,16 @@
-from Gepek import Gepek
 
-fajlom = open("gep.txt", "r", encoding='utf-8')
-fajlom.readline()
-lista=fajlom.readlines()
-fajlom.close()
-
-def gepel_szama():
+def gepek_szama(lista):
+    db: int= 0
     for i in range(0, len(lista), 1):
-        i += 1
-    print(f"A gépek száma: {i}")
+        db += lista[i].id
+    return db
 
-def atlag():
+def atlag(lista):
+    paros= 0
+    db= 0
     for i in range(0, len(lista), 1):
-        
+        if lista[i].hely % 2 == 0:
+            paros += i
+            db += 1
+    return paros/db
+    
