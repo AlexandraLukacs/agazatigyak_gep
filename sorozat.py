@@ -15,10 +15,7 @@ def tizzeloszthatoszam():
 def oszthatoak_szama():
     db: int= 0
     for i in range(0, len(lista), 1):
-        if lista[i] % 10 ==0 :
+        if lista[i] % 10 == 0:
             db += 1
         i += 1
     return db
-
-def konzolra_ir():
-    
