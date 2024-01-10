@@ -1,5 +1,5 @@
 class Gepek:
-    def __init__(self, id:int, hely:int, tipus:str, ipcim:int):
+    def __init__(self, id:int, hely:str, tipus:str, ipcim:str):
         self.id=id
         self.hely=hely
         self.tipus=tipus

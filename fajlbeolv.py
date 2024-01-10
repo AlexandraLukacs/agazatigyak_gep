@@ -8,12 +8,12 @@ fajlom.close()
 for i in range(0, len(lista), 1):
     aktsor:str=lista[i].strip()
     print(aktsor)
-    sor_lista=aktsor.split(", ")
+    sor_lista=aktsor.split("!")
     print(sor_lista[0])
     print(sor_lista[1])
     print(sor_lista[2])
     print(sor_lista[3])
-    gepek=Gepek(int(sor_lista[0]), int(sor_lista[1]), sor_lista[2], int(sor_lista[3]))
+    gepek=Gepek(int(sor_lista[0]), sor_lista[1], sor_lista[2], sor_lista[3])
     gepek_lista.append(gepek)
 
 for i in range(0, len(gepek_lista), 1):
@@ -23,7 +23,7 @@ import helyzet
 
 def szama():
     db=helyzet.gepek_szama(gepek_lista)
-    print(f"A gépek száma: {db}")
+    print(f"A gépek száma: {len(lista)}")
 
 def atlag_szam():
     atlaga=helyzet.atlag(gepek_lista)
